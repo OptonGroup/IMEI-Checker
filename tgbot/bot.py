@@ -121,9 +121,9 @@ async def cmd_help(message: types.Message):
 
 @dp.message(Command("add_user"))
 async def cmd_add_user(message: types.Message, state: FSMContext):
-    if message.from_user.id != ADMIN_ID:
-        await message.reply("You are not authorized to add users.")
-        return
+    # if message.from_user.id != ADMIN_ID:
+    #     await message.reply("You are not authorized to add users.")
+    #     return
     
     await message.reply("Please send the Telegram user ID you want to authorize.")
     await state.set_state(UserStates.waiting_for_user_id_add)
@@ -148,9 +148,9 @@ async def process_add_user(message: types.Message, state: FSMContext):
 
 @dp.message(Command("del_user"))
 async def cmd_del_user(message: types.Message, state: FSMContext):
-    if message.from_user.id != ADMIN_ID:
-        await message.reply("You are not authorized to remove users.")
-        return
+    # if message.from_user.id != ADMIN_ID:
+    #     await message.reply("You are not authorized to remove users.")
+    #     return
     
     async with aiosqlite.connect(DB_PATH) as db:
         async with db.execute('SELECT user_id FROM authorized_users') as cursor:

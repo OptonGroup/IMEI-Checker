@@ -2,6 +2,10 @@
 
 Сервер и Telegram-бот на базе FastAPI для проверки IMEI и получения подробной информации об устройстве.
 
+Попробовать бота в тестовом режиме [@hatiko_imei_check_bot](https://t.me/hatiko_imei_check_bot)
+
+Для теста бот доступен всем, и все могут добавлять себя через /add_user при помощи [@getmyid_bot](https://t.me/getmyid_bot)
+
 ## Функции
 
 - Проверка IMEI
@@ -56,11 +60,13 @@ Header: Authorization: Bearer {token}
 ```
 
 ## Telegram Bot Commands
- - `/start` - Start the bot
+ - `/start` - Запуск бота
 
- - `/help` - Show help message
+ - `/help` - Памятка
 
- - `/auth` - Authorize user (admin only)
+ - `/add_user` - Разрешить доступ пользователю (admin only)
+
+  - `/del_user` - Запретить доступ пользователю (admin only)
 
  - Отправить IMEI
 
@@ -71,4 +77,4 @@ Header: Authorization: Bearer {token}
 
  - Только цифр
 
- - Проверка по алгоритму (Луна)[https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D1%83%D0%BD%D0%B0]
+ - Проверка по алгоритму [Луна](https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D1%83%D0%BD%D0%B0)
