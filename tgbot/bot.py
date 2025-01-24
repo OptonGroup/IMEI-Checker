@@ -71,7 +71,7 @@ async def get_token():
     secret_key = os.getenv('JWT_SECRET_KEY')
     payload = {
         "sub": "user",
-        "exp": datetime.datetime.now(datetime.UTC) + datetime.timedelta(days=30)
+        "exp": datetime.datetime.now(datetime.datetime.UTC) + datetime.timedelta(days=30)
     }
     token = jwt.encode(
         payload,
